@@ -1,0 +1,44 @@
+.icon {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 2px solid black;
+    outline: none;
+    transition: .2s;
+}
+
+.icon:active {
+    transform: translateY(5px);
+}
+
+.active {
+    box-shadow: 0px 0px 0px 2px red;
+}
+
+.scissors {
+    background: url('./img/scissors.png') no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+
+.paper {
+    background: url('./img/paper.png') no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+
+.rock {
+    background: url('./img/rock.png') no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+
+.clear {
+    background: url('./img/bin.png') no-repeat;
+    background-size: 70%;
+    background-position: center;
+}
+
+.clear:active {
+    transform: translateY(5px);
+}
