@@ -24,21 +24,24 @@ buttonsArray.forEach(button => button.addEventListener('click', () => {
   if (button.dataset.option === resultComputer) {
 
     computerChoose.innerHTML = `Computer choose: ${resultComputer}`;
-    result.innerHTML = "Result: Draw";
+    result.innerHTML = "Result: Draw :|";
+    result.style.color = "grey";
 
   } else if ((button.dataset.option === "Scissors" && resultComputer === "Paper") ||
     (button.dataset.option === "Paper" && resultComputer === "Rock") ||
     (button.dataset.option === "Rock" && resultComputer === "Scissors")) {
 
     computerChoose.innerHTML = `Computer choose: ${resultComputer}`;
-    result.innerHTML = "Result: You Win";
+    result.innerHTML = "Result: You Win :)";
+    result.style.color = "green";
     yourPoints.innerHTML = `Your points: ${++counterPlayer}`;
     localStorage.setItem('ResultPlayer', `${counterPlayer}`)
 
   } else {
 
     computerChoose.innerHTML = `Computer choose: ${resultComputer}`;
-    result.innerHTML = "Result: You Lose";
+    result.innerHTML = "Result: You Lose :(";
+    result.style.color = "red";
     computerPoints.innerHTML = `Computer points: ${++counterComputer}`;
     localStorage.setItem('ResultComputer', `${counterComputer}`)
 

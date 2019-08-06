@@ -1,3 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    grid-gap: 10px;
+    margin: 20px;
+}
+
 .icon {
     height: 80px;
     width: 80px;
@@ -12,7 +38,7 @@
 }
 
 .active {
-    box-shadow: 0px 0px 0px 2px red;
+    box-shadow: 0px 0px 0px 5px aquamarine;
 }
 
 .scissors {
@@ -37,8 +63,37 @@
     background: url('./img/bin.png') no-repeat;
     background-size: 70%;
     background-position: center;
+    grid-area: 2 / 2 / 3 / 3;
 }
 
 .clear:active {
     transform: translateY(5px);
+}
+
+.text {
+    font-size: 20px;
+    text-align: center;
+}
+
+.result {
+    font-size: 30px;
+}
+
+@media(min-width: 1024px) {
+    .buttons {
+        grid-gap: 50px;
+    }
+
+    .icon {
+        width: 150px;
+        height: 150px;
+    }
+
+    .text {
+        font-size: 40px;
+    }
+
+    .result {
+        font-size: 50px;
+    }
 }
